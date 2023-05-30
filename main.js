@@ -1,4 +1,4 @@
-import { estoque } from "./estoque.js";
+import { x } from "./estoque.js";
 
 function setup(){
     const form = document.forms.entrada;
@@ -14,7 +14,6 @@ function envia(evento){
     estoque.estado++;
     atualiza();
 }
-
 
 
 function atualiza(){
