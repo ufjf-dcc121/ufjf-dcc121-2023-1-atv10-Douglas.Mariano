@@ -1,18 +1,17 @@
-
-window.addEventListener('load', setup);
+import { estoque } from "./estoque.js";
 
 function setup(){
     const form = document.forms.entrada;
     form.addEventListener('submit', envia);
 }
 
-let estado = 0;
+
 atualiza();
 
 function envia(evento){
     evento.preventDefault();
     console.log('Formulário enviado');
-    estado++;
+    estoque.estado++;
     atualiza();
 }
 
@@ -20,5 +19,5 @@ function envia(evento){
 
 function atualiza(){
     const ol = document.querySelector('ol');
-    ol.innerHTML = `<li>${estado}</li>`;
+    ol.innerHTML = `<li>${estoque.estado}</li>`;
 }
