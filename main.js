@@ -22,6 +22,8 @@ function envia(evento){
     console.log('Formulário enviado');
     const a = form.valor.value;
     adicionar(n);
+    form.valor.value = "";
+    form.valor.focus();
     atualiza();
 }
 
