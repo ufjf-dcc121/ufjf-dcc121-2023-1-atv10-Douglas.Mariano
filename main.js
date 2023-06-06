@@ -1,4 +1,14 @@
-import { x } from "./estoque.js";
+import {itens, x} from "./estoque.js";
+
+const form = document.forms.entrada;
+form.addEventListener('submit', envia);
+form.remover.addEventListener('click', remove);
+
+atualiza();
+
+function remove(){
+    
+}
 
 function setup(){
     const form = document.forms.entrada;
@@ -6,17 +16,16 @@ function setup(){
 }
 
 
-atualiza();
-
 function envia(evento){
     evento.preventDefault();
     console.log('Formulário enviado');
-    estoque.estado++;
+    x.estado++;
     atualiza();
 }
 
 
 function atualiza(){
     const ol = document.querySelector('ol');
-    ol.innerHTML = `<li>${estoque.estado}</li>`;
+    ol.innerHTML = `<li>${x.estado}</li>`;
 }
+
