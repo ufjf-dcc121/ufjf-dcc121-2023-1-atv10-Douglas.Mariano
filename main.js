@@ -4,10 +4,11 @@ const form = document.forms.entrada;
 form.addEventListener('submit', envia);
 form.remover.addEventListener('click', remove);
 
-atualiza();
 
 function remove(){
-    
+    console.log('remove acionado');
+    remover();
+    atualiza();
 }
 
 function setup(){
@@ -19,7 +20,8 @@ function setup(){
 function envia(evento){
     evento.preventDefault();
     console.log('Formulário enviado');
-    x.estado++;
+    const a = form.valor.value;
+    adicionar(n);
     atualiza();
 }
 
