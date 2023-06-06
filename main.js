@@ -5,6 +5,7 @@ form.addEventListener('submit', envia);
 form.remover.addEventListener('click', remove);
 
 
+
 function remove(){
     console.log('remove acionado');
     remover();
@@ -33,7 +34,7 @@ function atualiza(){
     ol.innerHTML = "";
     const z = itens();
 
-    for(let i=0; i<itens.length;i++){
+    for(let i=0; i<z.length;i++){
         const li = document.createElement('li');
         li.textContent = z[i];
         ol.appendChild(li);

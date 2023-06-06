@@ -1,8 +1,8 @@
 
-export const x = {estado: 0};
+const x = {estado: []};
 
 export function itens(){
-    return estado;
+    return [...x.estado];
 }
 
 export function remover(){
